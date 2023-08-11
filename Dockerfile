@@ -14,7 +14,7 @@ RUN mix phx.digest
 COPY lib lib
 RUN mix do compile, release
 
-FROM alpine:3.14.6 AS app
+FROM alpine:3.16.7 AS app
 RUN apk add --no-cache openssl ncurses-libs
 
 WORKDIR /ideciclo
